@@ -1,0 +1,5 @@
+Name: cubeb
+Description: cubeb low-level, cross-platform audio library by Mozilla
+Pkgs: cubeb
+SourcePath: source
+
