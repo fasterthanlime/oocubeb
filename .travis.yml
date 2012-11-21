@@ -1,0 +1,21 @@
+before_install:
+  - sudo aptitude -y -q install curl make libgc-dev
+  - git clone --depth=1 git://github.com/nddrylliog/rock.git 
+  - (cd rock && make -s quick-rescue)
+  - export PATH=$PATH:$PWD/rock/bin
+  - git clone --depth=1 git://github.com/kinetiknz/cubeb.git
+  - mkdir prefix
+  - export PREFIX=prefix
+  - export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
+  - cd cubeb
+  - autoreconf --install
+  - ./configure --prefix=$PREFIX
+  - make install
+  - cd ..
+
+script:
+  - export OOC_LIBS=$PWD
+  - cd samples
+  - mkdir -p travis
+  - rock tone.ooc -o=travis/tone && travis/tone
+
