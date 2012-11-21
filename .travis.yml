@@ -10,7 +10,7 @@ before_install:
   - cd cubeb
   - autoreconf --install
   - ./configure --prefix=$PREFIX
-  - make install
+  - make && make install
   - cd ..
 
 script:
