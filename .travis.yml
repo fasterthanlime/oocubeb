@@ -5,7 +5,7 @@ before_install:
   - export PATH=$PATH:$PWD/rock/bin
   - git clone --depth=1 git://github.com/kinetiknz/cubeb.git
   - mkdir prefix
-  - export PREFIX=prefix
+  - export PREFIX=$PWD/prefix
   - export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
   - cd cubeb
   - autoreconf --install
