@@ -1,3 +1,4 @@
+use cubeb
 include cubeb/cubeb
 
 CubeResultCode: enum {
