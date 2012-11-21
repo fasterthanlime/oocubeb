@@ -17,5 +17,5 @@ script:
   - export OOC_LIBS=$PWD
   - cd samples
   - mkdir -p travis
-  - rock tone.ooc -o=travis/tone && travis/tone
+  - rock -v tone.ooc -o=travis/tone && travis/tone
 
