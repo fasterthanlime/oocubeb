@@ -12,7 +12,7 @@ CubeSampleFormat: enum /* from cubeb_sample_format */ {
   S16LE: extern(CUBEB_SAMPLE_S16LE)
 
   /*< Big endian 16-bit signed PCM. */
-  S16BE: extern(CUBEB_SAMPLE_S16LE)
+  S16BE: extern(CUBEB_SAMPLE_S16BE)
 
   /*< Native endian 16-bit signed PCM. */
   S16NE: extern(CUBEB_SAMPLE_S16NE)
