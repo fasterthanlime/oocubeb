@@ -68,7 +68,7 @@ cubeb_init: extern func (CubeContext*, CString) -> Int
 cubeb_get_backend_id: extern func (CubeContext) -> CString
 
 data_callback_thunk: func (_stream: _CubeStream, stream: CubeStream,
-  buffer: Pointer, nframes: Long) {
+  buffer: Pointer, nframes: Long) -> Long {
   stream refill(buffer, nframes)
 }
 
